@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
+body {
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	background: rgb(0, 0, 0,.7);
+}
+
+
+.container {
+}
+
+.craft {
+}
+
+#container {
+	position: absolute;
+	height: 50em;
+	width: 60em;
+	transform: translate(+41%, +15%);
+	background: rgba(77, 77, 77, 0.863);
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	border-radius: 10px;
+	font-family: 'Caveat Brush', cursive;
+	border: 4px solid rgb(172, 168, 172);
+}
+
+#container:hover {
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.header {
+	position: relative;
+	top: -20px;
+	right: auto;
+	left: auto;
+	text-align: center;
+	background: rgba(77, 77, 77);
+	line-height: 100px;
+	border-radius: 25px;
+	font-family: 'Caveat Brush', cursive;
+	border: 4px solid rgb(172, 168, 172);
+}
+
+.header:hover {
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.offnui {
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	color: transparent;
+	cursor: pointer;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	left: 50%;
+	letter-spacing: 1.5px;
+	line-height: 90px;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-transform: uppercase;
+	top: 50%;
+	transform: translate(350%, -50%);
+	transition: all 0.2s ease-in;
+	width: 100px;
+	text-align: center;
+	border-radius: 100%;
+}
+
+.offnui::before,
+.offnui::after {
+  background-color: white;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform-origin: center left;
+  transition: all 0.2s ease-in;
+  width: 141.4214px;
+  z-index: -1;
+}
+
+.offnui::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.offnui::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.offnui:hover {
+  color: rgb(108, 106, 241); 
+}
+
+.offnui:hover::before,
+.offnui:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+
+.header h1{
+	color: rgb(172, 168, 172);
+}
+
+.craft-container {
+}
+
+.craft-container h1 {
+	color: rgb(172, 168, 172);
+}
+
+.craft-container h2 {
+	color: rgb(172, 168, 172);
+}
+
+#DrugInfo {
+	border: 4px solid rgb(172, 168, 172);
+	text-align: center;
+	height: 38.5em;
+	width: 60em;
+	position: absolute;
+	left: 4.5%;
+
+	border-radius: 5%;
+	color: rgb(172, 168, 172);
+}
+#DrugInfo h1 {
+	font-size: 60px;
+}
+
+#DrugInfo p {
+	font-size: 20px;
+}
+
+#DrugInfo:hover {
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.must_buy {
+	border: 4px solid rgb(172, 168, 172);
+	text-align: center;
+	position: absolute;
+	right: 25.5%;
+	bottom: 2%;
+	padding-right: 1%;
+	padding-left: 1%;
+	border-radius: 25px;
+}
+
+.must_buy:hover {
+	background: rgba(108, 106, 241, .1);
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.red_raisin {
+	border: 4px solid rgb(172, 168, 172);
+	text-align: center;
+	height: 300px;
+	position: absolute;
+	right: 36.5%;
+	padding-right: 10%;
+	padding-left: 10%;
+	border-radius: 5%;
+}
+
+.red_raisin:hover {
+	background: rgba(108, 106, 241, .1);
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.red_raisin img {
+	position: relative;
+	z-index: 1;
+	margin-right: auto;
+	margin-top: 20%;
+	font-size: 10px;
+}
+
+.raisin {
+	border: 4px solid rgb(172, 168, 172);
+	text-align: center;
+	height: 300px;
+	position: absolute;
+	left: auto;
+	padding-right: 10%;
+	padding-left: 10%;
+	border-radius: 5%;
+}
+
+.raisin:hover {
+	background: rgba(108, 106, 241, .1);
+	border: 4px solid rgb(108, 106, 241); 
+}
+
+.raisin img {
+	position: relative;
+	z-index: 1;
+	margin-right: auto;
+	margin-top: 20%;
+	font-size: 10px;
+}
+
+#back {
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	color: transparent;
+	cursor: pointer;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	left: 50%;
+	letter-spacing: 1.5px;
+	line-height: 90px;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-transform: uppercase;
+	top: 10%;
+	transform: translate(350%, -50%);
+	transition: all 0.2s ease-in;
+	width: 100px;
+	text-align: center;
+	border-radius: 100%;
+}
+
+#back::before,
+#back::after {
+  background-color: white;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform-origin: center left;
+  transition: all 0.2s ease-in;
+  width: 141.4214px;
+  z-index: -1;
+}
+
+#back::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#back::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+#back:hover {
+  color: rgb(108, 106, 241); 
+}
+
+#back:hover::before,
+#back:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+
+#button{
+	position: absolute;
+	bottom: 2%;
+	width: 75%;
+	padding: 4%;
+	border: 0;
+	color: rgb(172, 168, 172);
+	background: transparent;
+	cursor: pointer;
+	border: 2px solid;
+	transition: all 0.3s;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	left: 12%;
+}
+
+#button::before, #button::after{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 4px;
+	background: #353b48;
+	transform: skewX(50deg);
+	transition: .4s linear;
+}
+
+#button:hover{
+	background-color: rgba(108, 106, 241);
+	color: #353b48;
+}
+  
+#button::before{
+	top: -4px;
+	left: 10%;
+}
+  
+#button::after{
+	bottom: -4px;
+	right: 10%;
+}
+  
+#button:hover::before{
+	left: 80%;
+}
+  
+#button:hover::after{
+	right: 80%;
+}
+
+#info-button{
+	position: absolute;
+	bottom: 22%;
+	width: 25%;
+	padding: 2%;
+	color: rgb(172, 168, 172);
+	background: transparent;
+	border: 2px solid;
+	transition: all 0.3s;
+	outline: none;
+	font-size: 16px;
+	left: 35%;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0);
+}
+
+#info-button:hover{
+	background-color: rgba(108, 106, 241);
+	color: #353b48;
+}
+
+.raisin .Packageraisin{
+	position: absolute;
+	bottom: 2%;
+	width: 75%;
+	padding: 4%;
+	border: 0;
+	color: rgb(172, 168, 172);
+	background: transparent;
+	cursor: pointer;
+	border: 2px solid;
+	transition: all 0.3s;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	left: 12%;
+}
+
+.raisin .Packageraisin::before, .raisin .Packageraisin::after{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 4px;
+	background: #353b48;
+	transform: skewX(50deg);
+	transition: .4s linear;
+  }
+
+  .raisin .Packageraisin:hover{
+	background-color: rgba(108, 106, 241);
+}
+  
+  .raisin .Packageraisin::before{
+	top: -4px;
+	left: 10%;
+  }
+  
+  .raisin .Packageraisin::after{
+	bottom: -4px;
+	right: 10%;
+  }
+  
+  .raisin .Packageraisin:hover::before{
+	left: 80%;
+  }
+  
+  .raisin .Packageraisin:hover::after{
+	right: 80%;
+  }
+
+.raisin .InputPackageraisin{
+	position: absolute;
+	bottom: 22%;
+	width: 25%;
+	padding: 2%;
+	color: rgb(172, 168, 172);
+	background: transparent;
+	border: 2px solid;
+	transition: all 0.3s;
+	outline: none;
+	font-size: 16px;
+	left: 35%;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0);
+}
+
+.raisin .InputPackageraisin:hover{
+	background-color: rgba(108, 106, 241);
+	color: #353b48;
+}
+
+input[type=number] {
+	/*for absolutely positioning spinners*/
+	position: relative; 
+	padding: 5px;
+	padding-right: 25px;
+  }
+
+  input[type=number]::-webkit-outer-spin-button, 
+  input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: inner-spin-button !important;
+	width: 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+  }

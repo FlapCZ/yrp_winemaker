@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>yrp_winemaker</title>
+      <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+      <script src="ui.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   </head>
+   <body style="display: none;">
+         <div class="container">
+
+            <div class="craft" id="container" style="display: none;">
+               <div class="header">
+                  <h1>Marlowe Vineyard picking</h1>
+                  <button class="offnui">Close</button>
+               </div>
+               <div class="craft-container">
+                  <div class="raisin">
+                     <h1>wine</h1>
+                     <h2>white</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="70" width="70">
+                     <button class="SeeRaisinCraft" id="button">more</button>
+                  </div>
+
+                  <div class="red_raisin">
+                     <h1>wine</h1>
+                     <h2>red</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="70" width="70">
+                     <button class="SeeRedRaisinCraft" id="button">more</button>
+                  </div>
+
+                  <div class="must_buy">
+                     <h2>For more types of wine it is necessary to invest in expansion</h2>
+                  </div>
+
+                  <div class="raisin-info" id="DrugInfo" style="display: none;">
+                     <h1>White wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="100" width="100">
+                     <button class="back2" id="back">Back</button>
+                     <p>- enter the number of wines you want to collect</p>
+                     <p>- collecting 1 wine takes 1.5 seconds</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputRaisin" min="0" max="5">
+                     <button class="CraftRaisin" id="button">start collecting</button>
+                  </div>
+
+                  <div class="red_raisin-info" id="DrugInfo" style="display: none;">
+                     <h1>Red wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="100" width="100">
+                     <button class="back2" id="back">Back</button>
+                     <p>- enter the number of wines you want to collect</p>
+                     <p>- collecting 1 wine takes 2.0 seconds</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputRedRaisin" min="0" max="5">
+                     <button class="CraftRedRaisin" id="button">start collecting</button>
+                  </div>
+   
+               </div>
+            </div>
+
+            <div class="package" id="container" style="display: none;">
+               <div class="header">
+                  <h1>Marlowe Vineyard processing</h1>
+                  <button class="offnui">Close</button>
+               </div>
+               <div class="craft-container">
+                  <div class="raisin">
+                     <h1>wine</h1>
+                     <h2>white</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="70" width="70">
+                     <button class="SeeRaisinPackage" id="button">more</button>
+                  </div>
+
+                  <div class="red_raisin">
+                     <h1>wine</h1>
+                     <h2>red</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="70" width="70">
+                     <button class="SeeRedRaisinPackage" id="button">more</button>
+                  </div>
+
+                  <div class="must_buy">
+                     <h2>For more types of wine it is necessary to invest in expansion</h2>
+                  </div>
+
+                  <div class="raisin-pack" id="DrugInfo" style="display: none;">
+                     <h1>White wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="100" width="100">
+                     <button class="back" id="back">Back</button>
+                     <p>- processing 1 bottle of white wine takes 3s</p>
+                     <p>- you need 5 white wines to process</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputPackageRaisin" min="0" max="5">
+                     <button class="PackageRaisin" id="button">start processing</button>
+                  </div>
+
+                  <div class="red_raisin-pack" id="DrugInfo" style="display: none;">
+                     <h1>Red wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="100" width="100">
+                     <button class="back" id="back">Back</button>
+                     <p>- processing 1 bottle of red wine takes 3.5s</p>
+                     <p>- you need 5 red wines to process</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputPackageRedRaisin" min="0" max="5">
+                     <button class="PackageRedRaisin" id="button">start processing</button>
+                  </div>
+
+   
+               </div>
+            </div>
+
+            <div class="sell" id="container" style="display: none;">
+               <div class="header">
+                  <h1>Marlowe Vineyard selling</h1>
+                  <button class="offnui">Close</button>
+               </div>
+               <div class="craft-container">
+                  <div class="raisin">
+                     <h1>wine</h1>
+                     <h2>white</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="70" width="70">
+                     <button class="SeeRaisinPackage" id="button">more</button>
+                  </div>
+
+                  <div class="red_raisin">
+                     <h1>wine</h1>
+                     <h2>red</h2>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="70" width="70">
+                     <button class="SeeRedRaisinPackage" id="button">more</button>
+                  </div>
+
+                  <div class="must_buy">
+                     <h2>For more types of wine it is necessary to invest in expansion</h2>
+                  </div>
+
+                  <div class="raisin-pack" id="DrugInfo" style="display: none;">
+                     <h1>White wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/2083/2083698.svg" height="100" width="100">
+                     <button class="back" id="back">Back</button>
+                     <p>- sale 1 bottle of white wine takes 1s</p>
+                     <p>- for selling 1 bottle you get 10$</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputSellRaisin" min="0" max="5">
+                     <button class="SellRaisin" id="button">start selling</button>
+                  </div>
+
+                  <div class="red_raisin-pack" id="DrugInfo" style="display: none;">
+                     <h1>Red wine</h1>
+                     <img src="https://www.flaticon.com/svg/static/icons/svg/1412/1412542.svg" height="100" width="100">
+                     <button class="back" id="back">Back</button>
+                     <p>- sale 1 bottle of red wine takes 2s</p>
+                     <p>- for selling 1 bottle you get 13$</p>
+                     <input placeholder="enter number" type="number" id="info-button" name="quantity" class="InputSellRedRaisin" min="0" max="5">
+                     <button class="SellRedRaisin" id="button">start selling</button>
+                  </div>
+
+   
+               </div>
+            </div>
+
+         </div>
+      <script src="js/index.js"></script>      
+      </div>
+   </body>
+   <script src="bootstrap.min.js"></script>                
+</html>
+
