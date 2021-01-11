@@ -18,7 +18,7 @@ Config.Locale                     = 'english'
 
 Config.cl_config = {
     --es_extended
-	es_extended = 'hsuiwsdSAD587:479582sqeqesd_dbcuwq', -- default : esx:getSharedObject
+	es_extended = 'esx:getSharedObject', -- default : esx:getSharedObject
 	EnablePlayerManagement = true,
 	--marker settings
 	DrawDistance = 10,

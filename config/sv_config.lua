@@ -17,7 +17,7 @@ Config.Locale = 'english'
 
 Config.sv_config = {
     --es_extended
-    es_extended = 'hsuiwsdSAD587:479582sqeqesd_dbcuwq', -- default : esx:getSharedObject
+    es_extended = 'esx:getSharedObject', -- default : esx:getSharedObject
     --webhooks config
     webhook_on = true,
     webhook_armory_put = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
