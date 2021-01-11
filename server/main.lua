@@ -406,6 +406,7 @@ AddEventHandler('yrp_winemaker:PackageWhiteRaisin', function(itemName, amount)
 
 	if Config.oldESX then
 		local yrp = xPlayer.getInventoryItem(itemName)
+		local oldAmount = amount*5
 		if yrp.limit ~= -1 and amount >= yrp.limit then
 			xPlayer.showNotification(_U('quantity_invalid'))
 		else
@@ -425,7 +426,7 @@ AddEventHandler('yrp_winemaker:PackageWhiteRaisin', function(itemName, amount)
 					["embeds"] = {{
 						["color"] = 0xa5ff4a,
 						["timestamp"] = dateNow,
-						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..oldAmount.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
 					}}
 				}
 				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
@@ -449,7 +450,7 @@ AddEventHandler('yrp_winemaker:PackageWhiteRaisin', function(itemName, amount)
 					["embeds"] = {{
 						["color"] = 0xa5ff4a,
 						["timestamp"] = dateNow,
-						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..oldAmount.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
 					}}
 				}
 				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
@@ -497,7 +498,7 @@ AddEventHandler('yrp_winemaker:PackageRedRaisin', function(itemName, amount)
 					["embeds"] = {{
 						["color"] = 0xa5ff4a,
 						["timestamp"] = dateNow,
-						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..oldAmount.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
 					}}
 				}
 				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
@@ -521,7 +522,7 @@ AddEventHandler('yrp_winemaker:PackageRedRaisin', function(itemName, amount)
 					["embeds"] = {{
 						["color"] = 0xa5ff4a,
 						["timestamp"] = dateNow,
-						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..oldAmount.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
 					}}
 				}
 				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
