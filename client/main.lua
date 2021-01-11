@@ -1,3 +1,14 @@
+------------------------------------------------------------
+---------------------- yrp_winemaker -----------------------
+------------------------------------------------------------
+--------------------- Created by Flap ----------------------
+------------------------------------------------------------
+----------------- YourRolePlay Development -----------------
+--------- Thank you for using this winemaker job -----------
+----- Regular updates and lots of interesting scripts ------
+--------- discord -> https://discord.gg/hqZEXc8FSE ---------
+------------------------------------------------------------
+
 local CurrentActionData, currentTask = {}, {}
 local HasAlreadyEnteredMarker, isDead, hasAlreadyJoined, playerInService = false, false, false, false
 local LastStation, LastPart, LastPartNum, CurrentAction, CurrentActionMsg

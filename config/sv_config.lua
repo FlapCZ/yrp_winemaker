@@ -1,3 +1,14 @@
+------------------------------------------------------------
+---------------------- yrp_winemaker -----------------------
+------------------------------------------------------------
+--------------------- Created by Flap ----------------------
+------------------------------------------------------------
+----------------- YourRolePlay Development -----------------
+--------- Thank you for using this winemaker job -----------
+----- Regular updates and lots of interesting scripts ------
+--------- discord -> https://discord.gg/hqZEXc8FSE ---------
+------------------------------------------------------------
+
 Config                            = {}
 
 Config.oldESX                     = false -- true if you are using es_extended 1.1 and smaller

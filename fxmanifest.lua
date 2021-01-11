@@ -2,6 +2,17 @@ fx_version 'adamant'
 
 game 'gta5'
 
+------------------------------------------------------------
+---------------------- yrp_winemaker -----------------------
+------------------------------------------------------------
+--------------------- Created by Flap ----------------------
+------------------------------------------------------------
+----------------- YourRolePlay Development -----------------
+--------- Thank you for using this winemaker job -----------
+----- Regular updates and lots of interesting scripts ------
+--------- discord -> https://discord.gg/hqZEXc8FSE ---------
+------------------------------------------------------------
+
 description 'yrp_winemaker from esx_vigneronjob'
 author 'YourRolePlay Development'
 

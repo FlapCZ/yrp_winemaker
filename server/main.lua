@@ -1,3 +1,14 @@
+------------------------------------------------------------
+---------------------- yrp_winemaker -----------------------
+------------------------------------------------------------
+--------------------- Created by Flap ----------------------
+------------------------------------------------------------
+----------------- YourRolePlay Development -----------------
+--------- Thank you for using this winemaker job -----------
+----- Regular updates and lots of interesting scripts ------
+--------- discord -> https://discord.gg/hqZEXc8FSE ---------
+------------------------------------------------------------
+
 ESX = nil
 
 TriggerEvent(Config.sv_config.es_extended, function(obj) ESX = obj end)
@@ -142,6 +153,15 @@ ESX.RegisterServerCallback('yrp_winemaker:buyJobVehicle', function(source, cb, v
 		else
 			cb(false)
 		end
+	end
+end)
+
+AddEventHandler('onResourceStart', function(resource)
+	if resource == GetCurrentResourceName() then
+		Citizen.CreateThread(function()
+			Citizen.Wait(1000)	
+			print('^3[yrp_winemaker] If you found any problem or want to know what script will come out of YourRolePlay Development, here is discord -> ^2https://discord.gg/uSv9sWwhE9^7')
+		end)
 	end
 end)
 
