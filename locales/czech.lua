@@ -112,4 +112,7 @@ Locales['czech'] = {
   --webhooks
   ['webhook_put'] = 'Sklad - vklad',
   ['webhook_get'] = 'Sklad - výběr',
+  ['webhook_earn'] = 'Výdělek',
+  ['webhook_pick'] = 'Sebral',
+  ['webhook_processed'] = 'Předělal',
 }

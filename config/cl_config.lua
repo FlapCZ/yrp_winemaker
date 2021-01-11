@@ -81,22 +81,22 @@ Config.Zones = {
 
 Config.AuthorizedVehicles = {
 	car = {
-		recruit = {
+		brigadier = {
 			{model = 'mule3', price = 500},
 			{model = 'bison3', price = 500},
 		},
 
-		novice = {
+		beginner = {
 			{model = 'mule3', price = 500},
 			{model = 'bison3', price = 500},
 		},
 
-		experimente = {
+		collector = {
 			{model = 'mule3', price = 500},
 			{model = 'bison3', price = 500}
 		},
 
-		viceboss = {
+		manager = {
 			{model = 'mule3', price = 500},
 			{model = 'bison3', price = 500},
 			{model = 'sandking', price = 1500},
@@ -114,7 +114,7 @@ Config.AuthorizedVehicles = {
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements
 Config.Uniforms = {
-	recruit = {
+	brigadier = {
 		male = {
 			tshirt_1 = 59,  tshirt_2 = 0,
 			torso_1 = 12,   torso_2 = 5,
@@ -142,7 +142,7 @@ Config.Uniforms = {
 		}
 	},
 
-	novice = {
+	beginner = {
 		male = {
 			tshirt_1 = 57,  tshirt_2 = 0,
 			torso_1 = 13,   torso_2 = 5,
@@ -169,7 +169,7 @@ Config.Uniforms = {
 		}
 	},
 
-	experimente = {
+	collector = {
 		male = {
 			tshirt_1 = 57,  tshirt_2 = 0,
 			torso_1 = 13,   torso_2 = 2,
@@ -196,7 +196,7 @@ Config.Uniforms = {
 		}
 	},
 
-	viceboss = {
+	manager = {
 		male = {
 			tshirt_1 = 57,  tshirt_2 = 0,
 			torso_1 = 13,   torso_2 = 5,

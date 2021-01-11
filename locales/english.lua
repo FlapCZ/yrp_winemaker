@@ -112,4 +112,7 @@ Locales['english'] = {
   --webhooks
   ['webhook_put'] = 'Stock - deposit',
   ['webhook_get'] = 'Stock - selection',
+  ['webhook_earn'] = 'Earn',
+  ['webhook_pick'] = 'Pick',
+  ['webhook_processed'] = 'Processed',
 }

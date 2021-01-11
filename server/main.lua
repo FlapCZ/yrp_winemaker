@@ -254,10 +254,48 @@ AddEventHandler('yrp_winemaker:CraftRaisin', function(itemName, amount)
 			xPlayer.showNotification(_U('quantity_invalid'))
 		else
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_pick
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_pick'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\npick - **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	else
 		if xPlayer.canCarryItem(itemName, amount) then
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_pick
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_pick'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\npick - **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		else
 			xPlayer.showNotification(_U('quantity_invalid'))
 		end
@@ -281,10 +319,48 @@ AddEventHandler('yrp_winemaker:CraftRedRaisin', function(itemName, amount)
 			xPlayer.showNotification(_U('quantity_invalid'))
 		else
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_pick
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_pick'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\npick - **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	else
 		if xPlayer.canCarryItem(itemName, amount) then
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_pick
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_pick'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\npick - **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		else
 			xPlayer.showNotification(_U('quantity_invalid'))
 		end
@@ -315,11 +391,49 @@ AddEventHandler('yrp_winemaker:PackageWhiteRaisin', function(itemName, amount)
 		else
 			xPlayer.removeInventoryItem('white_raisin', 5 * amount)
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_processed
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_processed'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	else
 		if xPlayer.canCarryItem(itemName, amount) then
 			xPlayer.removeInventoryItem('white_raisin', 5 * amount)
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_processed
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_processed'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x white_raisin** for **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		else
 			xPlayer.showNotification(_U('quantity_invalid'))
 		end
@@ -349,11 +463,49 @@ AddEventHandler('yrp_winemaker:PackageRedRaisin', function(itemName, amount)
 		else
 			xPlayer.removeInventoryItem('red_raisin', 5 * amount)
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_processed
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_processed'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	else
 		if xPlayer.canCarryItem(itemName, amount) then
 			xPlayer.removeInventoryItem('red_raisin', 5 * amount)
 			xPlayer.addInventoryItem(itemName, amount)
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_processed
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_processed'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\njob - **' ..xPlayer.job.name.. '**\nprocessed - **' ..amount*5.. 'x red_raisin** for **' ..amount.. 'x ' ..itemName
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		else
 			xPlayer.showNotification(_U('quantity_invalid'))
 		end
@@ -384,10 +536,48 @@ AddEventHandler('yrp_winemaker:SellWhiteRaisin', function(itemName, amount)
 			account.addMoney(societyMoney)
 
 			TriggerClientEvent('esx:showNotification', source, 'Your company got ' ..societyMoney.. '$')
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_earn
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_earn'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\ncompany earn - **' ..xPlayer.job.name.. ' ' ..societyMoney.. '**$'
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		else
 			xPlayer.removeInventoryItem('flaska_white_raisin', amount)
 			xPlayer.addMoney(societyMoney)
 			TriggerClientEvent('esx:showNotification', source, 'You got ' ..societyMoney.. '$')
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_earn
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_earn'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\nPersonal earn - **' ..xPlayer.job.name.. ' ' ..societyMoney.. '**$'
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	end)
 end)
@@ -416,10 +606,49 @@ AddEventHandler('yrp_winemaker:SellRedRaisin', function(itemName, amount)
 			account.addMoney(societyMoney)
 
 			TriggerClientEvent('esx:showNotification', source, 'Your company got ' ..societyMoney.. '$')
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_earn
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_earn'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\ncompany earn - **' ..xPlayer.job.name.. ' ' ..societyMoney.. '**$'
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
+
 		else
 			xPlayer.removeInventoryItem('flaska_red_raisin', amount)
 			xPlayer.addMoney(societyMoney)
 			TriggerClientEvent('esx:showNotification', source, 'You got ' ..societyMoney.. '$')
+
+			if Config.sv_config.webhook_on then
+				local discord_webhook = Config.sv_config.webhook_earn
+				if discord_webhook == '' then
+					return
+				end
+				local headers = {
+					['Content-Type'] = 'application/json'
+				}
+				local data = {
+					["username"] = _U('webhook_earn'),
+					["embeds"] = {{
+						["color"] = 0xa5ff4a,
+						["timestamp"] = dateNow,
+						['description'] = 'Player - **' ..GetPlayerName(source) .. '**\nIdentifier - **' .. GetPlayerIdentifier(source) ..'**\nPersonal earn - **' ..xPlayer.job.name.. ' ' ..societyMoney.. '**$'
+					}}
+				}
+				PerformHttpRequest(discord_webhook, function(err, text, headers) end, 'POST', json.encode(data), headers)
+			end
 		end
 	end)
 end)

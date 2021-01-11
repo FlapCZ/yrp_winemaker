@@ -11,6 +11,9 @@ Config.sv_config = {
     webhook_on = true,
     webhook_armory_put = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
     webhook_armory_get = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
+    webhook_earn = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
+    webhook_pick = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
+    webhook_processed = 'https://discordapp.com/api/webhooks/798185697084833822/3tk_tO8gUj6Vu8GTQP48HG49-F015rQKX-U4lNq5N08mz7zr0YZpkOImCVXDHsK8zgyk',
     --price of wine bottles
     white_bootle = 10,  -- default 10$ per 1
     red_bootle = 13,  -- default 13$ per 1
