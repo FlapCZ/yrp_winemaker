@@ -115,4 +115,10 @@ Locales['english'] = {
   ['webhook_earn'] = 'Earn',
   ['webhook_pick'] = 'Pick',
   ['webhook_processed'] = 'Processed',
+
+  --usable items
+  ['drink_w_raisin'] = 'You ate white wine',
+  ['drink_r_raisin'] = 'You ate red wine',
+  ['drink_f_w_raisin'] = 'You drank a bottle of white wine',
+  ['drink_f_r_raisin'] = 'You drank a bottle of red wine',
 }

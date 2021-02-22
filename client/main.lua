@@ -1322,3 +1322,16 @@ AddEventHandler('yrp_drugs:PlayerDead', function()
 	})
     SetNuiFocus(false)
 end)
+
+--usable items
+
+RegisterNetEvent('yrp_winemaker:onDrink')
+AddEventHandler('yrp_winemaker:onDrink', function()
+  
+  local playerPed = GetPlayerPed(-1)
+  
+  TaskStartScenarioInPlace(playerPed, "WORLD_HUMAN_DRINKING", 0, 1)
+  Citizen.Wait(1000)
+  ClearPedTasksImmediately(playerPed)
+
+end)

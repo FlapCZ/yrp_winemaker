@@ -673,3 +673,53 @@ AddEventHandler('yrp_winemaker:SellRedRaisin', function(itemName, amount)
 		end
 	end)
 end)
+
+-- usable items
+
+ESX.RegisterUsableItem('white_raisin', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('white_raisin', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'drunk', 50000)
+	TriggerClientEvent('yrp_winemaker:onDrink', source)
+	TriggerClientEvent('esx:showNotification', source, _U('drink_w_raisin'))
+
+end)
+
+ESX.RegisterUsableItem('red_raisin', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('red_raisin', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'drunk', 50000)
+	TriggerClientEvent('yrp_winemaker:onDrink', source)
+	TriggerClientEvent('esx:showNotification', source, _U('drink_r_raisin'))
+
+end)
+
+ESX.RegisterUsableItem('flaska_white_raisin', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('flaska_white_raisin', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'drunk', 150000)
+	TriggerClientEvent('yrp_winemaker:onDrink', source)
+	TriggerClientEvent('esx:showNotification', source, _U('drink_f_w_raisin'))
+
+end)
+
+ESX.RegisterUsableItem('flaska_red_raisin', function(source)
+
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	xPlayer.removeInventoryItem('flaska_red_raisin', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'drunk', 150000)
+	TriggerClientEvent('yrp_winemaker:onDrink', source)
+	TriggerClientEvent('esx:showNotification', source, _U('drink_f_r_raisin'))
+
+end)
